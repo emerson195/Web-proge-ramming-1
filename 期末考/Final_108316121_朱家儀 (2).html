@@ -1,0 +1,161 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>108316121 期末</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        h2 {
+            margin-left: 15px;
+        }
+
+        #Header {
+            font-family: Microsoft JhengHei;
+            font-weight: bolder;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 45px;
+            height: 55px;
+            color: white;
+            background-color: #005AB5;
+            padding-left: 0;
+            box-shadow: 5px 5px 12px grey;
+            z-index: 1;
+        }
+
+        #b {
+            width: 700px;
+            margin-left: 440px;
+            border-right: 1px solid rgba(157,157,157,0.5);
+            border-left: 1px solid rgba(157,157,157,0.5);
+            border-radius: 0 0 20px 20px;
+            z-index: 2;
+        }
+
+        #Body {
+            font-family: Microsoft JhengHei;
+            font-weight: bolder;
+            padding-top: 10px;
+            vertical-align: middle;
+            height: 600px;
+            background-color: white;
+        }
+
+        #j {
+            text-align: center;
+        }
+
+        #day {
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+
+        #hour {
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+
+        #min {
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+
+        #sec {
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+
+        #Footer {
+            font-family: Microsoft JhengHei;
+            font-weight: bolder;
+            text-align: right;
+            padding-right: 30px;
+            vertical-align: middle;
+            line-height: 45px;
+            margin: 0;
+            border-radius: 0 0 20px 20px;
+            height: 50px;
+            color: white;
+            background-color: #005AB5;
+        }
+    </style>
+</head>
+
+<div id="Header">
+    <header>倒數計時器</header>
+</div>
+<body>
+    <div id="b">
+        <div id="Body">
+            <h2>距離下學期結束</h2>
+            <section>
+
+
+                </br>
+
+                </br>
+
+
+                <p id="j">還有<span id="day"></span>天<span id="hour"></span>小時<span id="min"></span>分<span id="sec"></span>秒</p>
+
+            </section>
+
+
+        </div>
+        <div id="Footer">
+            <footer>大家加油</footer>
+
+        </div>
+    </div>
+
+    <script>
+
+
+
+        var countdown = function (due) {
+            var now = new Date(); //現在時間
+            var rest = (due.getTime() - now.getTime()) / 1000;
+            if (rest < 0) {
+
+                var days = 0;
+                var hours = 0;
+                var min = 0;
+                var sec = 0;
+            }
+            else {
+                var sec = Math.floor(rest % 60);   //floor去掉小數
+                var min = Math.floor((rest / 60) % 60);
+                var hours = Math.floor((rest / 60 / 60) % 24);
+                var days = Math.floor(rest / 60 / 60 / 24);
+
+            }
+            var count = [days, hours, min, sec];
+            return count;
+
+        }
+        var goal = new Date(2020, 3, 24); //終點時間
+
+        var recalc = function () {
+            var counter = countdown(goal);
+            document.getElementById('day').textContent = counter[0];
+            document.getElementById('hour').textContent = counter[1];
+            document.getElementById('min').textContent = counter[2];
+            document.getElementById('sec').textContent = counter[3];
+            refresh(); //更新
+        }
+
+        var refresh = function () {
+            setTimeout(recalc, 1000);   //等待1000毫秒執行一次
+        }
+        recalc();//每秒做一次呼叫,更新時間
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<HTML>
+<HEAD>
+    <META NAME="GENERATOR" Content="Microsoft Visual Studio">
+    <TITLE>HW8</TITLE>
+    <style type="text/css">
+        nav{
+            display:block;
+            min-width:900px;
+            padding:0;
+            margin:0 auto 0 auto;
+            border:0px solid grey;
+            text-align :center;
+        }
+        /*第一層ul*/
+        nav ul {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            /*overflow:auto;*/
+        }
+
+        nav > ul > li {
+            position: relative;
+            /*position:relative;*/
+            /*float:left;*/
+            display: block;
+            width: 100px;
+            border: 1px solid white;
+            /*background: linear-gradient(darkblue, silver);*/
+            color: white;
+        }
+            /*第一層a*/
+            nav > ul > li > a {
+                display: block;
+                float: left;
+                padding-top: 5px;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                background: white;
+            }
+
+        /*第二層ul背景*/
+        nav ul li ul {
+            background: #b8860b;
+            border-bottom: 1px solid aliceblue;
+        }
+        /* 第二層a字型 */
+        nav > ul > li > ul > li > a {
+            font-size: 12px;
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        nav ul li ul {
+            /*讓第二層ul跳脫文件，定位*/
+            position: absolute;
+            width: 100px;
+            /*避免捲軸出現*/
+            overflow: visible;
+            /*讓ul與母階層li相同位置*/
+            clear: left;
+            margin-top: 30px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+
+        nav {
+            font-size: 15px;
+        }
+
+            nav ul {
+            }
+
+            nav li ul li {
+                /* 覆寫繼承自第一層的浮動設定 */
+                float: none;
+                text-align: center;
+            }
+
+            nav > ul > li:hover {
+                background: none;
+                background-color: white;
+                border-left: 1px solid grey;
+                border-top: 1px solid grey;
+                border-right: 1px solid grey;
+                display: block;
+                color: black;
+                overflow: auto;
+            }
+
+                nav > ul > li:hover > a {
+                    border-left: 1px solid grey;
+                    border-top: 1px solid grey;
+                    border-right: 1px solid grey;
+                    color: black;
+                    overflow: auto;
+                }
+            /*隱藏 顯示*/
+            /*先隱藏第二層 */
+            nav ul li ul {
+                visibility: hidden;
+            }
+
+            nav ul li:hover ul {
+                visibility: visible;
+            }
+
+            nav
+            /*第一層ul背景*/
+            nav ul li a {
+                background: linear-gradient(darkblue, silver);
+            }
+
+            nav ul li ul ul {
+                position: absolute;
+            }
+        /*nav>ul>li>ul:hover > a{
+            border-left:1px solid grey;
+            border-top:1px solid grey;
+            border-right:1px solid grey;
+            color:black;
+        }*/
+
+        /* ul li ul{
+            visibility:hidden;
+        }
+         ul li.hover ul{
+            visibility:visible;
+        }*/
+
+    </style>
+</HEAD>
+<BODY>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">上課教材</a>
+                <ul>
+                    <li><a href="#">HW1</a></li>
+                    <hr>
+                    <li><a href="#">HW2</a></li>
+                    <hr>
+                    <li><a href="#">HW3</a></li>
+                    <hr>
+                    <li><a href="#">HW4</a></li>
+                    <hr>
+                    <li><a href="#">HW5</a></li>
+                    <hr>
+                    <li><a href="#">HW6</a></li>
+                    <hr>
+                    <li><a href="#">HW7</a></li>
+                    <hr>
+                    <li><a href="#">HW8</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">繳交作業</a>
+                <ul>
+                    <li><a href="#">HW1</a></li>
+                    <hr>
+                    <li><a href="#">HW2</a></li>
+                    <hr>
+                    <li><a href="#">HW3</a></li>
+                    <hr>
+                    <li><a href="#">HW4</a></li>
+                    <hr>
+                    <li><a href="#">HW5</a></li>
+                    <hr>
+                    <li><a href="#">HW6</a></li>
+                    <hr>
+                    <li><a href="#">HW7</a></li>
+                    <hr>
+                    <li><a href="#">HW8</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">聯絡方式</a></li>
+        </ul>
+    </nav>
+
+
+</BODY>
+</HTML>

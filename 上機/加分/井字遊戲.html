@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>井字遊戲</title>
+        <style type="text/css">
+        table
+        {
+          border-collapse:collapse;
+          
+            
+        }
+            td
+            {
+                width:50px;
+                height:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <table border=1>
+            <h1>井字遊戲</h1>
+        <tr>
+            <td id="0"><div><input type="button"></div></td>
+            <td id="1"><div><input type="button"></div></td>
+            <td id="2"><div><input type="button"></div></td>
+        </tr>
+        <tr>
+            <td id="3"><div><input type="button"></div></td>
+            <td id="4"><div><input type="button"></div></td>
+            <td id="5"><div><input type="button"></div></td>
+        </tr>
+        <tr>
+            <td id="6"><div><input type="button"></div></td>
+            <td id="7"><div><input type="button"></div></td>
+            <td id="8"><div><input type="button"></div></td>
+        </tr>
+        </table>
+        <script>
+            
+            document.getElementById.onclick("0")=function()
+            {
+                
+                var matrix[3][3];
+                
+                if((matrix[m][n]==1))
+                    {
+                        window.alert("以被占請重新選擇")
+                    }
+                if(Math.abs(matrix[m][0]+matrix[m][1]+matrix[m][2]==3 && turn="o"))
+                   {
+                   
+                            window.alert("玩家獲勝");
+                       }
+                else if(Math.abs(matrix[m][0]+matrix[m][1]+matrix[m][2]==3 && turn="x"))
+                    {
+                            window.alert("電腦獲勝");
+                    }
+                
+                    if(Math.abs(matrix[0][m]+matrix[1][m]+matrix[2][m]==3 && turn=  "o"))
+                    {
+                            window.alert("玩家獲勝");
+                       }
+                    else if(Math.abs(matrix[0][m]+matrix[1][m]+matrix[2][m]==3 && turn = "x"))
+                    {
+                        window.alert("電腦獲勝");
+                    }
+                    if(Math.abs(matrix[0][0]+matrix[1][1]+matrix[2][2]==3 && turn = "o")
+                       {
+                            window.alert("玩家獲勝");
+                       }
+                    if(Math.abs(matrix[2][0]+matrix[1][1]+matrix[0][2]==3)
+                       {
+                            window.alert("電腦獲勝");
+                       }
+                    else
+                      {
+                    window.alert("輸了");
+                      }
+            document.getElementById.onclick=function ()
+            }
+            
+            
+            /*function play(ob)
+            {
+                if(ob.innerText == " " && turn ==0)
+                    {
+                        ob.innerText ="O";
+                        turn = 1;
+                    }
+                else if(ob.innerText == " " &&turn ==1)
+                    {
+                        ob.innerText = "1";
+                        turn = 0;
+                    }
+                
+                else
+                {
+                    window.alert("已被占用，請重新選擇");
+                }
+            }
+            var matrix= [
+                ['a','a', 'a'],
+                ['o','o', 'o'],
+                ['x','x','x']
+            ];
+            function beginPlay(matrix,Type){
+                for(var m=0;m<matrix.length;n++)
+                    {
+                        for(var n = 0;n< matrix[m];n++)
+                            {
+                                if(matrix[m][n] == Type){
+                                    matrix[m][n] = 1;
+                                }
+                            }
+                    }
+            }
+            function Process(matrix){
+                var result = [];
+                for (var n=0; n<matrix[m];m++)
+                {
+                    for (var n=0; n<matrix[m];m++)
+                    { 
+                            
+                        
+                    if(Math.abs(matrix[m][0]+matrix[m][1]+matrix[m][2]==3){
+                            result.push([m,n])
+                       }
+                    if(Math.abs(matrix[0][m]+matrix[1][m]+matrix[2][m]==3){
+                            result.push([m,n])
+                       }
+                    if(Math.abs(matrix[0][0]+matrix[1][1]+matrix[2][2]==3){
+                            result.push([m,n])
+                       }
+                    if(Math.abs(matrix[2][0]+matrix[1][1]+matrix[0][2]==3){
+                            result.push([m,n])
+                       }   
+            
+                   }
+            }
+                console.log(result);*/
+        </script>
+    </body>
+</html>

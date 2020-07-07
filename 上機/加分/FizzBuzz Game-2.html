@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8">
+<TITLE>FizzBuzz Game</TITLE>
+    
+</HEAD>
+<BODY>
+    <h1>FizzBuzz Game</h1>
+    <p>請輸入一個正整數:<input type="text" id="input"></p>
+    <button type="button" value="開始" id="start">開始</button>
+    
+    <script>
+        document.getElementById('start').onclick = function()
+        {
+           
+        
+       
+        var num = document.getElementById('input').value;
+        
+        
+        for (i=1;i<=num;i++) {
+            
+            if(num%1!=0){
+                console.log('請重新輸入');
+            }
+            else if (i % 3 == 0 && i % 5 == 0) {
+                console.log('FizzBuzz');
+                
+            }
+            else if (i % 3 == 0) {
+                console.log('Fizz');
+                
+            }
+            else if (i % 5 == 0) {
+                console.log('Buzz');
+                
+            }
+            
+            else {
+
+                console.log(i);
+                
+            }
+        }
+        }
+
+    </script>
+
+
+</BODY>
+</HTML>
