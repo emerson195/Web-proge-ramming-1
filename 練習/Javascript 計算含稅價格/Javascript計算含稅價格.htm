@@ -1,0 +1,16 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8">
+
+<TITLE>計算含稅價格</TITLE>
+</HEAD>
+<BODY>
+    <script type="text/javascript">
+    var sum = function(price){
+        var tax = 0.05;
+        return price + price * tax;
+    }
+    document.write('咖啡機的價格為' + sum(8000) + '元(含稅)');
+    </script>
+</BODY>
+</HTML>

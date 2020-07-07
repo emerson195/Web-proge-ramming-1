@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charst="utf-8">
+    <title>Canvas 兩個圖層</title>
+    <style type="text/css">
+        canvas{
+            border:1px solid black;
+        }
+    </style>
+    </head>
+    <body onload="draw();">
+        <canvas id="mycanvas"></canvas>
+        <script type="text/javascipt">
+        function draw()
+        {
+           var canvas = document.getelementById("mycanvas");
+           if(canvas.getContext)
+           {
+              var ctx = canvas.getContext('2d');
+              ctx.fillStyle = "#FF0000";
+              ctx.fillRect (0,0,150,75);
+              ctx.fillStyle = "rgba(0,0,200,0.5)";
+              ctx.fillRect (50,30,150,75);
+           }
+        }
+        </script>
+    </body>
+</html>

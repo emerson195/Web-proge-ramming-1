@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>table</title>
+        
+    </head>
+    <body>
+    <section>
+        <table border="1">
+            <tr>
+                <td id="title"></td>
+                <td id="price"></td>
+                <td id="stock"></td>
+            </tr>
+            <tr>
+                <td id="title_content"></td>
+                <td id="price_value"></td>
+                <td id="stock_number"></td>
+            </tr>
+        </table>
+    </section>
+    <script>
+        var jsbook = {title:'名稱',price:'價位',stock:'庫存',title_content:'Javascript入門',price_value:500,stock_number:3}
+        document.getElementById('title').textContent = jsbook.title;
+        document.getElementById('price').textContent = jsbook.price;
+        document.getElementById('stock').textContent = jsbook.stock;
+        document.getElementById('title_content').textContent = jsbook.title_content;
+        document.getElementById('price_value').textContent = jsbook.price_value + '元';
+        document.getElementById('stock_number').textContent = jsbook.stock_number;
+    </script>
+    </body>
+</html>

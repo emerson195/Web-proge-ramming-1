@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>點選縮圖切換圖片</title>
+        <style>
+            section img
+            {
+                max-width:100%;
+            }
+            .center
+            {
+                margin:10 auto 0 auto;
+                width: 500px;
+            }
+            ul
+            {
+                overflow:hidden;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            li
+            {
+                float:left;
+                margin-right: 1%;
+                width:24%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>圖片切換</h1>
+            <h2>切換畫面上的圖片</h2>
+        </header>
+        <section>
+            <div class="center">
+                <div>
+                    <img src="img1.jpg" id="bigimg">
+            </div>
+                <ul>
+                    <li><img src="thumb-img1.jpg" class="thumb" data-image="img1.jpg"></li>
+                    <li><img src="thumb-img2.jpg" class="thumb" data-image="img2.jpg"></li>
+                    <li><img src="thumb-img3.jpg" class="thumb" data-image="img3.jpg"></li>
+                </ul>
+            </div>
+        </section>
+        <script>
+            var thumbs = document.querySelectorAll('.thumb');
+            for(var i = 0;i<thumbs.length;i++)
+                {
+                    thumbs[i].onclick = function()
+                    {
+                        document.getElementById('bigimg').src = this.dataset.image;
+                    }
+                }
+        </script>
+    </body>
+</html>

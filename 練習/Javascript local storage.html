@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="color.css">
+        <script type="text/javascript">
+            function isLoad(){
+                if(typeof)(Storage)=="undifined"{
+                    alert("Sorry 你的瀏覽器不支援 Web Storage");
+                   } 
+                else{
+                    btn_save.addEventListener("click",saveToLocalStorage);
+                    btn_load.addEventListener("click",loadFromLocalStorage);
+                }
+                
+            }
+            
+            function saveToLocalStorage{
+                localStorage.username = inputname.value;
+            }
+            function loadFromLocalStorage{
+                show_LocalStorage.innerHTML=localStorage.username +"你好，歡迎來到我的網站";
+            }
+        </script>
+        <style type="text/css">
+            img{
+                width:500px;
+                height:600px;
+            }
+        </style>
+    </head>
+    <body>
+        <body onload="isLoad()">
+            <img src="D:\朱家儀\大學\大一\網頁程式設計(一)\Dog.jpg"/><br/>
+            請輸入你的姓名:<input type="text" id="inputname" value=""><br/>
+            <div id="show_LocalStorage"></div><br/>
+            <button id="btn_save">儲存至LocalStorage</button>
+            <button id="btn_load">從LocalStorage讀取資料</button>
+        </body>
+    </body>
+</html>
